@@ -1,7 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def index(request):
-    return HttpResponse("<h2>HEY!</h2>")
+    return render(request, 'webapp/home.html')
+
+
+def contact(request):
+    return render(request, 'webapp/basic.html', {'content':['Email',
+                                                      'test@test.ru']
+                                                } )
 
 # Create your views here.
